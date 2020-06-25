@@ -1,0 +1,47 @@
+<div class="container main-container pt-5">
+    <div class="row mb-5">
+        <div class="col-sm-12">
+            <h3>Interpolation</h3>
+            <!-- <p>You've clicked: {{clickCount}}</p> -->
+
+            <p [ngClass]="{
+                'text-secondary': clickCount < 3,
+                'text-success': clickCount >= 3,
+                'text-warning': clickCount >= 5,
+                'text-danger': clickCount >=9
+            }">You've clicked: {{clickCount}}</p>
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-sm-12">
+            <h3>Property Binding</h3>
+            <button class="btn btn-info" [disabled]="clickCount >= 10">Info</button>
+            <img [src]="imageUrl" height="50px" width="50px" alt="image">
+        </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-sm-12">
+            <h3>Event Biding</h3>
+            <button class="btn btn-warning mr-2" (click)="addClick()">Click Me!</button>
+            <button class="btn btn-danger" (click)="resetClickCount()" [disabled]="clickCount < 10">Reset Click Count</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Two-way Data Binding</h3>
+            <div class="d-flex flex-column">
+                <!-- <label for="">What is your name?</label>
+                <input class="col-md-3 mb-3" type="text" (keyup)="keyUp($event)">
+                <span>Well, your name is: {{name}}</span> -->
+
+                <!-- <label for="">What is your name?</label>
+                <input class="col-md-3 mb-3" type="text" [(ngModel)]="name" (ngModelChange)="name = $event">
+                <span>Well, your name is: {{name}}</span> -->
+
+                <label for="">What is your name?</label>
+                <input class="col-md-3 mb-3" type="text" [(ngModel)]="name">
+                <span>Well, your name is: {{name}}</span>
+            </div>
+        </div>
+    </div>
+</div>

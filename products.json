@@ -1,0 +1,36 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "gaming chair",
+            "price": 500.99,
+            "onSale": true,
+            "onSalePrice": 432.88,
+            "img": "gaming-chair.jpg"
+        },
+        {
+            "id": 2,
+            "name": "keyboard",
+            "price": 788.45,
+            "onSale": false,
+            "onSalePrice": 0,
+            "img": "keyboard.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "laptop",
+            "price": 3258.23,
+            "onSale": true,
+            "onSalePrice": 1500.70,
+            "img": "laptop.jpeg"
+        },
+        {
+            "id": 4,
+            "name": "smartphone",
+            "price": 4522.00,
+            "onSale": false,
+            "onSalePrice": 0,
+            "img": "smartphone.png"
+        }
+    ]
+}

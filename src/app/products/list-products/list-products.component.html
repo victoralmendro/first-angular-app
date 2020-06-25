@@ -1,0 +1,33 @@
+<div class="container main-container pt-5 mb-5">
+    <div class="row">
+        <div *ngFor="let product of products" class="col-md-4">
+            <div class="card mb-3">
+                <a [routerLink]="['/product-details', product.id]">
+                    <img src="../assets/{{product.img}}" class="card-img-top img-fluid p-3" alt="platform">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{product.name | titlecase }}</h5>
+                    
+                    <div [ngSwitch]="product.onSale">
+                        <span *ngSwitchCase="true" class="card-text">On Sale!</span>
+                        <span *ngSwitchCase="false" class="card-text">Price:</span>
+                    </div>
+
+                    <div *ngIf="product.onSale">
+                        <h4>
+                            {{product.onSalePrice | currency:'BRL':'symbol':'1.2-2':'pt' }}
+                            <small>
+                                <del>{{product.price | currency:'BRL':'symbol':'1.2-2':'pt' }}</del>
+                            </small>
+                        </h4>    
+                    </div>
+
+                    <h4 *ngIf="!product.onSale">{{product.price | currency:'BRL':'symbol':'1.2-2':'pt' }}</h4>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn btn-block btn-primary">+ Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
