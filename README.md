@@ -11,5 +11,9 @@ The packege [json-server](https://www.npmjs.com/package/json-server) was used to
 
 The file name used as `database` is `products.json`
 
+## Running the Project
 Use this command to initiate the db:
 `npx json-server --watch products.json`
+
+Use this command to start Angular server:
+`ng s`
